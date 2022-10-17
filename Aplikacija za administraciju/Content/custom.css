@@ -1,0 +1,26 @@
+﻿#navigacija-korisnik {
+    margin-left: 1150px;
+}
+
+#navigacija-profil, #navigacija-odjava {
+    margin-left: 50px;
+}
+
+#navigacija-projekti, #navigacija-mojtim, #navigacija-izvjestaji,
+#navigacija-timovi, #navigacija-djelatnici, #navigacija-klijenti, #navigacija-korisnik,
+#navigacija-profil, #navigacija-odjava{
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+#navigacija-projekti:hover, #navigacija-mojtim:hover, #navigacija-izvjestaji:hover,
+#navigacija-timovi:hover, #navigacija-djelatnici:hover, #navigacija-klijenti:hover,
+#navigacija-profil:hover, #navigacija-odjava:hover {
+     color:yellow;
+     font-size: 1.5em;
+}
+
+#navigacija-odjava:hover {
+    font-size:1.5em;
+    background-color: red;
+}

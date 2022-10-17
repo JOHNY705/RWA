@@ -1,0 +1,55 @@
+﻿@using Aplikacija_za_administraciju.Models;
+
+@{
+    ViewBag.Title = "Profil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Djelatnik djelatnik = Session["djelatnik"] as Djelatnik;
+} 
+<h1 style="margin-left:100px;">Pregled profila - @djelatnik.ToString()</h1>
+
+<div class="row" style="background-color:lightblue;">
+    <div class="col-md-12 mt-4 mb-4">
+        <div class="form-group row my-4" style="margin-left:88px; font-size:large; margin-top:20px;">
+            @Html.Label(expression: "Ime:", htmlAttributes: new { @class = "col-sm-2 col-form-label font-weight-bold" })
+            <div class="col-sm-9 d-flex align-items-center">
+                @Html.Label(expression: djelatnik.Ime, htmlAttributes: new { @class = "col-form-label " })
+            </div>
+        </div>
+        <div class="form-group row my-4" style="margin-left:88px; font-size:large; margin-top:20px;">
+            @Html.Label(expression: "Prezime:", htmlAttributes: new { @class = "col-sm-2 col-form-label font-weight-bold" })
+            <div class="col-sm-9 d-flex align-items-center">
+                @Html.Label(expression: djelatnik.Prezime, htmlAttributes: new { @class = "col-form-label " })
+            </div>
+        </div>
+        <div class="form-group row my-4" style="margin-left:88px; font-size:large; margin-top:20px;">
+            @Html.Label(expression: "Tip djelatnika:", htmlAttributes: new { @class = "col-sm-2 col-form-label font-weight-bold" })
+            <div class="col-sm-9 d-flex align-items-center">
+                @Html.Label(expression: djelatnik.Tip.ToString(), htmlAttributes: new { @class = "col-form-label " })
+            </div>
+        </div>
+        <div class="form-group row my-4" style="margin-left:88px; font-size:large; margin-top:20px;">
+            @Html.Label(expression: "Email:", htmlAttributes: new { @class = "col-sm-2 col-form-label font-weight-bold" })
+            <div class="col-sm-9 d-flex align-items-center">
+                @Html.Label("", djelatnik.Email)
+            </div>
+        </div>
+        <div class="form-group row my-4" style="margin-left:88px; font-size:large; margin-top:20px;">
+            @Html.Label(expression: "Datum zaposlenja:", htmlAttributes: new { @class = "col-sm-2 col-form-label font-weight-bold" })
+            <div class="col-sm-9 d-flex align-items-center">
+                @Html.Label("", djelatnik.DatumZaposlenja.ToShortDateString())
+            </div>
+        </div>
+        <div class="form-group row my-4" style="margin-left:88px; font-size:large; margin-top:20px;">
+            @Html.Label(expression: "Tim:", htmlAttributes: new { @class = "col-sm-2 col-form-label font-weight-bold" })
+            <div class="col-sm-9 d-flex align-items-center">
+                @Html.Label(expression: djelatnik.Tim.Naziv, htmlAttributes: new { @class = "col-form-label " })
+            </div>
+        </div>
+        <div class="form-group row mt-4">
+            <div class="col-sm-1" style="margin-left:100px;">
+                @Html.ActionLink(linkText: "Promijeni lozinku", actionName: "PromjenaSifre", routeValues: null, htmlAttributes: new { @class="btn btn-warning btn-lg"})
+            </div>
+        </div>
+    </div>
+</div>
+

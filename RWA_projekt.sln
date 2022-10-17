@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplikacija za administraciju", "Aplikacija za administraciju\Aplikacija za administraciju.csproj", "{2CF74947-7A71-48BB-8C64-7EEF08659AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplikacija za evidenciju radnih sati", "Aplikacija za evidenciju radnih sati\Aplikacija za evidenciju radnih sati.csproj", "{73043568-D6A2-4BB6-902A-01F2585E06A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CF74947-7A71-48BB-8C64-7EEF08659AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF74947-7A71-48BB-8C64-7EEF08659AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF74947-7A71-48BB-8C64-7EEF08659AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF74947-7A71-48BB-8C64-7EEF08659AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73043568-D6A2-4BB6-902A-01F2585E06A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73043568-D6A2-4BB6-902A-01F2585E06A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73043568-D6A2-4BB6-902A-01F2585E06A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73043568-D6A2-4BB6-902A-01F2585E06A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6EC8846-E407-4A08-B6C4-958AE1D00256}
+	EndGlobalSection
+EndGlobal

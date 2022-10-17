@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavigacijaMaster.master.cs" Inherits="Aplikacija_za_administraciju.NavigacijaMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/custom.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <ul class="list-group list-group list-group-horizontal" style="list-style:none;">
+                            <li id="navigacija-projekti">
+                                <asp:HyperLink NavigateUrl="Projekti.aspx" runat="server" CssClass="nav-item nav-link active" Text="Projekti"
+                                    ID="navitemProjekti" />
+                            </li>
+                            <li id="navigacija-mojtim">
+                                <asp:HyperLink NavigateUrl="PregledTima.aspx" runat="server" CssClass="nav-item nav-link active" Text="Pregled tima"
+                                    ID="navitemMojTim" />
+                            </li>
+                            <li id="navigacija-izvjestaji">
+                                <asp:HyperLink NavigateUrl="Izvjestaji.aspx" runat="server" CssClass="nav-item nav-link active" Text="Izvještaji"
+                                    ID="navitemIzvjestaji" />
+                            </li>
+                            <li id="navigacija-timovi">
+                                <asp:HyperLink NavigateUrl="Timovi.aspx" runat="server" CssClass="nav-item nav-link active" Text="Timovi"
+                                    ID="navitemTimovi" />
+                            </li>
+                            <li id="navigacija-djelatnici">
+                                <asp:HyperLink NavigateUrl="Djelatnici.aspx" runat="server" CssClass="nav-item nav-link active" Text="Djelatnici"
+                                    ID="navitemDjelatnici" />
+                            </li>
+                            <li id="navigacija-klijenti">
+                                <asp:HyperLink NavigateUrl="Klijenti.aspx" runat="server" CssClass="nav-item nav-link active" Text="Klijenti"
+                                    ID="navitemKlijenti" />
+                            </li>
+                            <li id="navigacija-korisnik">
+                                <asp:Label Text="Ime Prezime" ID="lbImePrezime" CssClass="nav-item nav-link active" runat="server" />
+                            </li>
+                            <li id="navigacija-profil">
+                                <asp:LinkButton Text="Profil" ID="btnProfil" CssClass="nav-item nav-link active" runat="server" OnClick="btnProfil_Click"/>
+                            </li>
+                            <li id="navigacija-odjava">
+                                <asp:LinkButton Text="Odjava" ID="btnOdjava" CssClass="nav-item nav-link active" runat="server" OnClick="btnOdjava_Click"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

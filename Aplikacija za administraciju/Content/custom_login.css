@@ -1,0 +1,31 @@
+﻿html {
+    box-sizing:border-box;
+}
+
+#welcome-tekst {
+    font-size:3.5em;
+}
+
+.inputField {
+    padding:0.4em;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius:0.2em;
+}
+
+label[for=cbRememberMe] {
+    margin-left: 8px;
+    font-size:1.2em;
+}
+
+.gumbPrijava {
+    background: blue;
+    font-size: 1.6em;
+    font-weight: bold;
+    border-radius: 0.2em;
+    color:white;
+    transition: all 0.5s; 
+}
+
+.gumbPrijava:hover { font-size:1.2em; font-weight:normal}

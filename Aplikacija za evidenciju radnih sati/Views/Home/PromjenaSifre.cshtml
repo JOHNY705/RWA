@@ -1,0 +1,37 @@
+﻿@model Aplikacija_za_evidenciju_radnih_sati.Models.ChangePasswordViewModel
+@{
+    ViewBag.Title = "Promjena lozinke";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-left:100px; font-weight: bold;">Promjena lozinke</h1>
+
+@using (Html.BeginForm(actionName: "PromjenaSifre", controllerName: "Home", method: FormMethod.Post))
+{
+    <div class="form-group row mt-4 mb-3" style="font-size:large; margin-left: 85px; margin-top:40px;">
+        @Html.Label(expression: "Unesite novu lozinku:", htmlAttributes: new { @class="col-sm-2 col-form-label"})
+        <div class="col-sm-5 d-flex align-items-center">
+            @Html.TextBoxFor(pwd => pwd.NewPassword, new { @class="form-control", type="password"})
+        </div>
+        <div class="col-sm-4">
+            @Html.ValidationMessageFor(pwd => pwd.NewPassword, "", new { @class = "text-danger"})
+        </div>
+    </div>
+    <div class="form-group row" style="font-size:large; margin-left: 85px; margin-top:20px;">
+        @Html.Label(expression: "Unesite ponovno novu lozinku:", htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-5 d-flex align-items-center">
+            @Html.TextBoxFor(pwd => pwd.ConfirmPassword, new { @class="form-control", type="password"})
+        </div>
+        <div class="col-sm-4">
+            @Html.ValidationMessageFor(pwd => pwd.ConfirmPassword, "", new { @class = "text-danger"})
+        </div>
+    </div>
+    <div class="form-group row mt-4" style="margin-left: 86px;">
+        <div class="col-sm-3">
+            <input type="submit" value="Potvrdi promjenu" class="btn btn-primary btn-lg"/>
+        </div>
+        <div class="col-sm-3" style="margin-left:520px;">
+            @Html.ActionLink(linkText: "Odustani", actionName: "ShowProfil", routeValues: null, htmlAttributes: new { @class="btn btn-danger btn-lg"})
+        </div>
+    </div>
+}
